@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #f8fafc;
+  --secondary: #ffffff;
+  --card: #ffffff;
+  --accent: #e99a24;
+  --accent-light: #f5b942;
+  --heading: #173746;
+  --body: #475569;
+  --muted: #64748b;
+  --border: #e2e8f0;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: var(--primary);
+  color: var(--body);
+  font-family: 'Inter', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(233, 154, 36, 0.25);
+  color: var(--heading);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+section:not(#home) {
+  background-color: var(--primary);
+  color: var(--body);
+}
+
+section:not(#home) h2,
+section:not(#home) h3 {
+  color: var(--heading);
+}
+
+section:not(#home) p,
+section:not(#home) dl {
+  color: var(--body);
+}
+
+section:not(#home) article,
+section:not(#home) [class*="bg-[#171717]"],
+section:not(#home) [class*="bg-[#121212]"] {
+  border-color: var(--border);
+  background-color: var(--secondary);
+  box-shadow: 0 8px 26px rgba(23, 55, 70, 0.06);
+}
+
+section:not(#home) [class*="bg-[#080808]"]:not([class*="fixed"]) {
+  border-color: var(--border);
+  background-color: #fff4e4;
+  color: #b86b08;
+}
+
+section:not(#home) [class*="text-[#A5A5A5]"],
+section:not(#home) [class*="text-[#C2C2C2]"],
+section:not(#home) [class*="text-[#D9D9D9]"] {
+  color: var(--muted);
+}
+
+section:not(#home) [class*="text-[#D4AF66]"],
+section:not(#home) [class*="text-[#F0D69A]"] {
+  color: #b86b08;
+}
+
+section:not(#home) [class*="border-[#D4AF66]"] {
+  border-color: var(--border);
+}
+
+[class*="bg-[#D4AF66]"] {
+  background-color: var(--accent);
+}
+
+[class*="hover:bg-[#F0D69A]"]:hover {
+  background-color: var(--accent-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
