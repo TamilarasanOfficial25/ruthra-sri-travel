@@ -7,6 +7,7 @@ const navItems: NavItem[] = [
   { id: 'about', label: 'About' },
   { id: 'services', label: 'Services' },
   { id: 'fleet', label: 'Fleet' },
+  { id: 'journey', label: 'Our Journey' },
   { id: 'gallery', label: 'Gallery' },
   { id: 'team', label: 'Our Team' },
   { id: 'contact', label: 'Contact' },
@@ -67,11 +68,12 @@ export function Navbar() {
         <button type="button" onClick={() => handleNavigate('home')} className="flex items-center gap-3 text-left">
           <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-[#E2E8F0] bg-white">
             <img
-              src="/images/brand/ruthrasri-travels-logo-compact.png"
+              src="/images/brand/ruthrasri-travels-mark-80.png"
               alt=""
               width="40"
               height="40"
-              className="h-full w-full object-contain p-0.5"
+              className="h-full w-full object-contain"
+              fetchPriority="high"
               decoding="async"
             />
           </div>

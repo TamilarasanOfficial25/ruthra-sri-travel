@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-export function useHeroSlider(totalSlides: number, autoplayDelay = 10000) {
+export function useHeroSlider(totalSlides: number, autoplayDelay = 5000, isPaused = false) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isDocumentVisible, setIsDocumentVisible] = useState(() => !document.hidden);
   const timeoutRef = useRef<number | null>(null);
 
   const clearTimer = useCallback(() => {
@@ -25,7 +25,7 @@ export function useHeroSlider(totalSlides: number, autoplayDelay = 10000) {
   }, [totalSlides]);
 
   useEffect(() => {
-    if (totalSlides <= 1 || isPaused || document.hidden) {
+    if (totalSlides <= 1 || isPaused || !isDocumentVisible) {
       clearTimer();
       return;
     }
@@ -35,11 +35,11 @@ export function useHeroSlider(totalSlides: number, autoplayDelay = 10000) {
     }, autoplayDelay);
 
     return clearTimer;
-  }, [autoplayDelay, clearTimer, currentIndex, isPaused, next, totalSlides]);
+  }, [autoplayDelay, clearTimer, currentIndex, isDocumentVisible, isPaused, next, totalSlides]);
 
   useEffect(() => {
     const handleVisibilityChange = () => {
-      setIsPaused(document.hidden);
+      setIsDocumentVisible(!document.hidden);
     };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
@@ -48,8 +48,6 @@ export function useHeroSlider(totalSlides: number, autoplayDelay = 10000) {
 
   return {
     currentIndex,
-    isPaused,
-    setIsPaused,
     next,
     prev,
     goTo,

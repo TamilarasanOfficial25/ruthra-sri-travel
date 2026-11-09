@@ -7,6 +7,7 @@ import { Contact } from './components/sections/Contact/Contact';
 import { Fleet } from './components/sections/Fleet/Fleet';
 import { Gallery } from './components/sections/Gallery/Gallery';
 import { Hero } from './components/sections/Hero/Hero';
+import { Journey } from './components/sections/Journey/Journey';
 import { OurTeam } from './components/sections/OurTeam/OurTeam';
 import { Services } from './components/sections/Services/Services';
 import { Testimonials } from './components/sections/Testimonials/Testimonials';
@@ -80,6 +81,7 @@ function App() {
         <About />
         <Services />
         <Fleet />
+        <Journey />
         <WhyChooseUs />
         <Gallery />
         <OurTeam />

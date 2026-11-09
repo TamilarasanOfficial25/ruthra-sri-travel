@@ -37,10 +37,16 @@ export function HeroControls({ currentIndex, totalSlides, onPrev, onNext, onSele
             type="button"
             onClick={() => onSelect(index)}
             aria-label={`Go to slide ${index + 1}`}
-            className={`h-2.5 rounded-full transition-all duration-300 ${
-              index === currentIndex ? 'w-10 bg-[#D4AF66]' : 'w-2.5 bg-white/40 hover:bg-white/70'
-            }`}
-          />
+            aria-pressed={index === currentIndex}
+            className="flex h-10 w-10 items-center justify-center"
+          >
+            <span
+              aria-hidden="true"
+              className={`h-2.5 rounded-full transition-all duration-300 ${
+                index === currentIndex ? 'w-10 bg-[#D4AF66]' : 'w-2.5 bg-white/40 hover:bg-white/70'
+              }`}
+            />
+          </button>
         ))}
       </div>
     </div>
