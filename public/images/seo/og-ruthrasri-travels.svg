@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#080808"/>
+      <stop offset="100%" stop-color="#171717"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0%" stop-color="#F0D69A"/>
+      <stop offset="100%" stop-color="#D4AF66"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#D4AF66" stroke-opacity="0.45"/>
+  <circle cx="260" cy="420" r="180" fill="#D4AF66" fill-opacity="0.10"/>
+  <path d="M130 390 L610 390 L706 330 L836 330 C878 330 910 348 933 382 L1028 520 L146 520 Z" fill="url(#gold)" opacity="0.88"/>
+  <path d="M270 270 L510 220 L722 268 L707 365 L259 365 Z" fill="#1d1d1d" stroke="#F0D69A" stroke-width="6"/>
+  <path d="M344 240 L430 190 L550 190 L624 246 L344 246 Z" fill="#E5D9B5" fill-opacity="0.55"/>
+  <circle cx="290" cy="510" r="52" fill="#1a1a1a" stroke="#F0D69A" stroke-width="10"/>
+  <circle cx="850" cy="510" r="52" fill="#1a1a1a" stroke="#F0D69A" stroke-width="10"/>
+  <circle cx="290" cy="510" r="18" fill="#F0D69A"/>
+  <circle cx="850" cy="510" r="18" fill="#F0D69A"/>
+  <text x="120" y="140" fill="#F0D69A" font-family="Arial, sans-serif" font-size="32" letter-spacing="8">RUTHRASRI</text>
+  <text x="120" y="190" fill="#FFFFFF" font-family="Georgia, serif" font-size="62" font-weight="700">TRAVELS</text>
+  <text x="120" y="240" fill="#A5A5A5" font-family="Arial, sans-serif" font-size="22" letter-spacing="5">PREMIUM TAXI • OUTSTATION • AIRPORT</text>
+</svg>
